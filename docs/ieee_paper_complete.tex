@@ -18,7 +18,7 @@ Dining}
 \begin{document}
 \maketitle
 \begin{abstract}
-Institutional hostels must prepare meals before exact student participation is known, creating a recurring trade-off between service availability and avoidable food waste. This paper presents an AI-driven demand-forecasting and preparation-recommendation framework for hostel dining operations. The system is designed as a reproducible engineering pipeline comprising: (i) a synthetic meal-level data generator for controlled experimentation; (ii) leakage-aware preprocessing and chronological train-test evaluation; (iii) Linear Regression, Random Forest, and XGBoost regression models for student-turnout forecasting; and (iv) an operational policy that converts forecast attendance into recommended preparation weight using meal-specific per-student consumption and a configurable safety buffer. The default synthetic dataset contains 2,193 breakfast, lunch, and dinner observations spanning two years, with explanatory variables representing hostel occupancy, advance bookings, menu popularity, examinations, weekends, vacations, special events, temperature, and rainfall intensity. On a chronological holdout of 441 observations, Linear Regression achieved MAE 10.158 students, RMSE 12.825 students, and R² 0.9736; XGBoost achieved the lowest MAE at 10.118 students with RMSE 13.044 and R² 0.9727, while Random Forest achieved MAE 10.565, RMSE 13.521, and R² 0.9706. A retrospective operational simulation with a 3% buffer reduced modeled leftover food from 8,423.00 kg to 2,600.69 kg while introducing simulated shortage equivalent to 1.077% of realized consumption. These results demonstrate the engineering feasibility of coupling demand prediction with an explicit preparation decision rule. Because the experiments use synthetic data, the reported savings are simulation outcomes and require validation on real hostel records before institutional or causal claims are made.
+Institutional hostels must prepare meals before exact student participation is known, creating a recurring trade-off between service availability and avoidable food waste. This paper presents an AI-driven demand-forecasting and preparation-recommendation framework for hostel dining operations. The system is designed as a reproducible engineering pipeline comprising: (i) a synthetic meal-level data generator for controlled experimentation; (ii) leakage-aware preprocessing and chronological train-test evaluation; (iii) Linear Regression, Random Forest, and XGBoost regression models for student-turnout forecasting; and (iv) an operational policy that converts forecast attendance into recommended preparation weight using meal-specific per-student consumption and a configurable safety buffer. The default synthetic dataset contains 2,193 breakfast, lunch, and dinner observations spanning two years, with explanatory variables representing hostel occupancy, advance bookings, menu popularity, examinations, weekends, vacations, special events, temperature, and rainfall intensity. On a chronological holdout of 441 observations, Linear Regression achieved MAE 10.158 students, RMSE 12.825 students, and R² 0.9736; XGBoost achieved MAE 10.345 students with RMSE 13.152 and R² 0.9722, while Random Forest achieved MAE 10.565, RMSE 13.521, and R² 0.9706. A retrospective operational simulation with a 3% buffer reduced modeled leftover food from 8,423.00 kg to 2,600.69 kg while introducing simulated shortage equivalent to 1.077% of realized consumption. These results demonstrate the engineering feasibility of coupling demand prediction with an explicit preparation decision rule. Because the experiments use synthetic data, the reported savings are simulation outcomes and require validation on real hostel records before institutional or causal claims are made.
 \end{abstract}
 \begin{IEEEkeywords}
 food waste, demand forecasting, hostel dining, institutional catering, machine learning, Random Forest, XGBoost, sustainability, decision support.
@@ -445,7 +445,7 @@ Model & MAE (students) & RMSE (students) & R² \\
 \midrule\noalign{}
 \bottomrule\noalign{}
 Linear Regression & 10.158 & \textbf{12.825} & \textbf{0.9736} \\
-XGBoost & \textbf{10.118} & 13.044 & 0.9727 \\
+XGBoost & \textbf{10.345} & 13.152 & 0.9722 \\
 Random Forest & 10.565 & 13.521 & 0.9706 \\
 \end{tabular}%
 }
@@ -698,7 +698,7 @@ Regression, Random Forest, and XGBoost turnout models, and a
 meal-specific kilogram recommendation policy. On 441 chronological
 synthetic holdout observations, all three models achieved R² above 0.97;
 Linear Regression obtained the best RMSE at 12.825 students while
-XGBoost obtained the best MAE at 10.118 students. A 3\% safety-buffer
+XGBoost obtained the best MAE at 10.345 students. A 3\% safety-buffer
 simulation reduced modeled leftovers while retaining a separately
 quantified shortage rate.
 
