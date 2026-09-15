@@ -1,0 +1,21 @@
+{
+  "synthetic_data_notice": "This dataset is simulated and must not be represented as empirical hostel measurements.",
+  "generator_config": {
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31",
+    "hostel_capacity": 520,
+    "seed": 42
+  },
+  "record_count": 2193,
+  "date_min": "2024-01-01",
+  "date_max": "2025-12-31",
+  "meal_counts": {
+    "Breakfast": 731,
+    "Dinner": 731,
+    "Lunch": 731
+  },
+  "mean_student_turnout": 322.017,
+  "mean_waste_percentage": 10.869,
+  "total_food_prepared_kg": 363186.03,
+  "total_food_wasted_kg": 39577.37
+}

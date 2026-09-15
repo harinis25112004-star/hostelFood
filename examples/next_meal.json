@@ -1,0 +1,15 @@
+{
+  "date": "2026-01-12",
+  "meal_category": "Lunch",
+  "menu_name": "Veg-Biryani-Raita",
+  "residents_present": 492,
+  "advance_bookings": 438,
+  "weekend_flag": 0,
+  "exam_flag": 0,
+  "vacation_flag": 0,
+  "festival_flag": 0,
+  "special_event_flag": 0,
+  "temperature_c": 29.4,
+  "rain_index": 0.08,
+  "menu_popularity_score": 0.98
+}

@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Rebuild synthetic data and model pipeline
+        run: |
+          python src/generate_synthetic_data.py --output data/hostel_food_waste_ci.csv --seed 42
+          python src/train_predictive_pipeline.py --data data/hostel_food_waste_ci.csv --output-dir reports/ci --model-dir models/ci --seed 42

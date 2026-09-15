@@ -1,0 +1,26 @@
+{
+  "synthetic_data_notice": "Evaluation uses generated synthetic data; results are demonstration results, not empirical evidence from an operating hostel.",
+  "best_model": "LinearRegression",
+  "train_records": 1752,
+  "test_records": 441,
+  "train_start": "2024-01-01",
+  "train_end": "2025-08-06",
+  "test_start": "2025-08-07",
+  "test_end": "2025-12-31",
+  "safety_buffer": 0.03,
+  "kg_per_student_by_meal": {
+    "Breakfast": 0.35987276129377177,
+    "Dinner": 0.4903918356430016,
+    "Lunch": 0.5392875144286264
+  },
+  "operational_simulation": {
+    "holdout_actual_prepared_kg": 76234.07,
+    "holdout_recommended_prepared_kg": 71418.43,
+    "prepared_food_change_pct": -6.317,
+    "holdout_actual_recorded_waste_kg": 8423.0,
+    "holdout_simulated_leftover_kg": 2600.69,
+    "simulated_leftover_reduction_pct": 69.124,
+    "holdout_simulated_shortage_kg": 749.03,
+    "shortage_rate_vs_consumption_pct": 1.077
+  }
+}
